@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djv8me4dluhgi"
+path="res://.godot/imported/ceiling_tile.obj-136bdfc9979779411b8cfef829fb683a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ceiling_tile.obj-136bdfc9979779411b8cfef829fb683a.mesh"]
+
+source_file="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/KayKit_DungeonRemastered_1.1_FREE/Assets/obj/ceiling_tile.obj"
+dest_files=["res://.godot/imported/ceiling_tile.obj-136bdfc9979779411b8cfef829fb683a.mesh", "res://.godot/imported/ceiling_tile.obj-136bdfc9979779411b8cfef829fb683a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

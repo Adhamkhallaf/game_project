@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://b54apd8aoh8m"]
+
+[ext_resource type="PackedScene" uid="uid://df0a74yd1qqj2" path="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/floor_foundation_allsides.gltf" id="1_uans4"]
+[ext_resource type="PackedScene" uid="uid://bnmkkg07jspsn" path="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/Knight.glb" id="2_lwesy"]
+[ext_resource type="Script" uid="uid://cpoegnrdovas" path="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/knight.gd" id="3_7ldk3"]
+[ext_resource type="PackedScene" uid="uid://dtncjiifdrlfx" path="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall.gltf" id="4_rrf1o"]
+[ext_resource type="PackedScene" uid="uid://dw1w62malx27t" path="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_doorway.gltf" id="5_224pi"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bau1e"]
+
+[node name="floor_foundation_allsides2" unique_id=454228219 instance=ExtResource("1_uans4")]
+
+[node name="floor_foundation_allsides" parent="." index="0" unique_id=533359615]
+transform = Transform3D(8.143888, 0, 0, 0, 1, 0, 0, 0, 7.1011915, 0.033918142, -1.5559015, 0.2176652)
+
+[node name="StaticBody3D" parent="floor_foundation_allsides" index="0" unique_id=471677614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.021717548, 0.016324759)
+
+[node name="CollisionShape3D" parent="floor_foundation_allsides/StaticBody3D" index="0" unique_id=629067305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0.018097878, -0.0003671646)
+
+[node name="Knight" parent="." index="1" unique_id=154354347 instance=ExtResource("2_lwesy")]
+transform = Transform3D(1, 0, 0, 0, 1.0586526, 0, 0, 0, 1, 0.07579076, 1.570941, 0.15285468)
+script = ExtResource("3_7ldk3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Knight" index="1" unique_id=268200096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1319083, 0)
+shape = SubResource("CapsuleShape3D_bau1e")
+
+[node name="wall2" parent="." index="2" unique_id=600927658 instance=ExtResource("4_rrf1o")]
+transform = Transform3D(4.6627617, 0, 0, 0, 1, 0, 0, 0, 1, -0.0075387955, 0.31553602, 7.430018)
+
+[node name="wall3" parent="." index="3" unique_id=1687236637 instance=ExtResource("4_rrf1o")]
+transform = Transform3D(0.07192468, 0, 0.94792676, 0, 1, 0, -3.5861018, 0, 0.019012101, 8.578096, 0.48391438, 0.05512178)
+
+[node name="wall4" parent="." index="4" unique_id=977404096 instance=ExtResource("4_rrf1o")]
+transform = Transform3D(4.348034, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018258095, 0.35706592, -6.6749325)
+
+[node name="wall_doorway2" parent="." index="5" unique_id=1515985595 instance=ExtResource("5_224pi")]
+transform = Transform3D(-0.03261445, 0, -0.999468, 0, 1, 0, 0.999468, 0, -0.03261445, -8.747357, 0.48391342, -0.16158801)
+
+[node name="wall5" parent="." index="6" unique_id=1249915907 instance=ExtResource("4_rrf1o")]
+transform = Transform3D(0.08590387, 0, -0.9963034, 0, 1, 0, 0.9963034, 0, 0.08590387, -8.227271, 0.4839139, -4.055463)
+
+[node name="wall6" parent="." index="7" unique_id=564508397 instance=ExtResource("4_rrf1o")]
+transform = Transform3D(0.18119629, 0, 0.92836976, 0, 1, 0, -1.5466431, 0, 0.10876274, -8.756728, 0.4839139, 4.096355)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="8" unique_id=579267995]
+transform = Transform3D(0.258819, 0.9659259, 1.0007824e-08, -0.4829629, 0.12940949, 0.8660254, 0.8365163, -0.22414386, 0.49999997, -2, 7, 6)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." index="9" unique_id=790942258]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 6, 6)

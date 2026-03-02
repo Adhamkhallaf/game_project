@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://hbnbaiqq5i88"
+path="res://.godot/imported/floor_tile_small_corner.obj-b60b5b2a5f758156f8c3d6d58b13f47d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/floor_tile_small_corner.obj-b60b5b2a5f758156f8c3d6d58b13f47d.mesh"]
+
+source_file="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/KayKit_DungeonRemastered_1.1_FREE/Assets/obj/floor_tile_small_corner.obj"
+dest_files=["res://.godot/imported/floor_tile_small_corner.obj-b60b5b2a5f758156f8c3d6d58b13f47d.mesh", "res://.godot/imported/floor_tile_small_corner.obj-b60b5b2a5f758156f8c3d6d58b13f47d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
