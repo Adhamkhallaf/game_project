@@ -10,22 +10,32 @@
 
 [node name="floor_foundation_allsides2" unique_id=454228219 instance=ExtResource("1_uans4")]
 
-[node name="floor_foundation_allsides" parent="." index="0" unique_id=533359615]
+[node name="floor_foundation_allsides" parent="." index="0" unique_id=1345932638]
 transform = Transform3D(8.143888, 0, 0, 0, 1, 0, 0, 0, 7.1011915, 0.033918142, -1.5559015, 0.2176652)
 
-[node name="StaticBody3D" parent="floor_foundation_allsides" index="0" unique_id=471677614]
+[node name="StaticBody3D" parent="floor_foundation_allsides" index="0" unique_id=414371519]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.021717548, 0.016324759)
 
-[node name="CollisionShape3D" parent="floor_foundation_allsides/StaticBody3D" index="0" unique_id=629067305]
+[node name="CollisionShape3D" parent="floor_foundation_allsides/StaticBody3D" index="0" unique_id=1715132495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0.018097878, -0.0003671646)
 
 [node name="Knight" parent="." index="1" unique_id=154354347 instance=ExtResource("2_lwesy")]
-transform = Transform3D(1, 0, 0, 0, 1.0586526, 0, 0, 0, 1, 0.07579076, 1.570941, 0.15285468)
+transform = Transform3D(-0.025723314, 0, 0.99966913, 0, 1.0586526, 0, -0.99966913, 0, -0.025723314, 0.07579076, 1.570941, 0.15285468)
 script = ExtResource("3_7ldk3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Knight" index="1" unique_id=268200096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1319083, 0)
 shape = SubResource("CapsuleShape3D_bau1e")
+
+[node name="Node3D" type="Node3D" parent="Knight" index="2" unique_id=56071071]
+transform = Transform3D(1, 0, 0, 0, 0.91241056, 0.24447969, 0, -0.25881907, 0.9659258, -0.07579076, 4.183676, 5.847145)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Knight/Node3D" index="0" unique_id=1957889741]
+transform = Transform3D(0.9927561, 0.036124762, -0.11458856, -0.012013376, 0.9787947, 0.20449135, 0.11954595, -0.20163335, 0.9721382, 0, 0, 0)
+collision_mask = 0
+spring_length = 3.0
+
+[node name="Camera3D" type="Camera3D" parent="Knight/Node3D/SpringArm3D" index="0" unique_id=716183788]
 
 [node name="wall2" parent="." index="2" unique_id=600927658 instance=ExtResource("4_rrf1o")]
 transform = Transform3D(4.6627617, 0, 0, 0, 1, 0, 0, 0, 1, -0.0075387955, 0.31553602, 7.430018)
@@ -48,6 +58,3 @@ transform = Transform3D(0.18119629, 0, 0.92836976, 0, 1, 0, -1.5466431, 0, 0.108
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="8" unique_id=579267995]
 transform = Transform3D(0.258819, 0.9659259, 1.0007824e-08, -0.4829629, 0.12940949, 0.8660254, 0.8365163, -0.22414386, 0.49999997, -2, 7, 6)
 shadow_enabled = true
-
-[node name="Camera3D" type="Camera3D" parent="." index="9" unique_id=790942258]
-transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 6, 6)
