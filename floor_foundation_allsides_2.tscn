@@ -10,6 +10,7 @@
 
 [node name="floor_foundation_allsides2" unique_id=454228219 instance=ExtResource("1_uans4")]
 
+<<<<<<< HEAD
 [node name="floor_foundation_allsides" parent="." index="0" unique_id=533359615]
 transform = Transform3D(8.143888, 0, 0, 0, 1, 0, 0, 0, 7.1011915, 0.033918142, -1.5559015, 0.2176652)
 
@@ -21,12 +22,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0.018097878, -
 
 [node name="Knight" parent="." index="1" unique_id=154354347 instance=ExtResource("2_lwesy")]
 transform = Transform3D(1, 0, 0, 0, 1.0586526, 0, 0, 0, 1, 0.07579076, 1.570941, 0.15285468)
+=======
+[node name="floor_foundation_allsides" parent="." index="0" unique_id=1369322621]
+transform = Transform3D(8.143888, 0, 0, 0, 1, 0, 0, 0, 7.1011915, 0.033918142, -1.5559015, 0.2176652)
+
+[node name="StaticBody3D" parent="floor_foundation_allsides" index="0" unique_id=1240003586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.021717548, 0.016324759)
+
+[node name="CollisionShape3D" parent="floor_foundation_allsides/StaticBody3D" index="0" unique_id=611528870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0.018097878, -0.0003671646)
+
+[node name="Knight" parent="." index="1" unique_id=154354347 instance=ExtResource("2_lwesy")]
+transform = Transform3D(-0.022739513, 0, 0.9997415, 0, 1.0586526, 0, -0.9997415, 0, -0.022739513, 0.07579076, 1.570941, 0.15285468)
+>>>>>>> cecabda (connected camera to player model)
 script = ExtResource("3_7ldk3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Knight" index="1" unique_id=268200096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1319083, 0)
 shape = SubResource("CapsuleShape3D_bau1e")
 
+<<<<<<< HEAD
+=======
+[node name="Camera3D" type="Camera3D" parent="Knight" index="2" unique_id=790942258]
+transform = Transform3D(-0.9999108, 0.003455632, -0.012896599, 1.1717245e-09, 0.91241056, 0.24447958, 0.013351537, 0.25879586, -0.9658397, -0.023815244, 2.7466779, -3.291274)
+
+>>>>>>> cecabda (connected camera to player model)
 [node name="wall2" parent="." index="2" unique_id=600927658 instance=ExtResource("4_rrf1o")]
 transform = Transform3D(4.6627617, 0, 0, 0, 1, 0, 0, 0, 1, -0.0075387955, 0.31553602, 7.430018)
 
@@ -46,8 +66,13 @@ transform = Transform3D(0.08590387, 0, -0.9963034, 0, 1, 0, 0.9963034, 0, 0.0859
 transform = Transform3D(0.18119629, 0, 0.92836976, 0, 1, 0, -1.5466431, 0, 0.10876274, -8.756728, 0.4839139, 4.096355)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="8" unique_id=579267995]
+<<<<<<< HEAD
 transform = Transform3D(0.258819, 0.9659259, 1.0007824e-08, -0.4829629, 0.12940949, 0.8660254, 0.8365163, -0.22414386, 0.49999997, -2, 7, 6)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="." index="9" unique_id=790942258]
 transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 6, 6)
+=======
+transform = Transform3D(0.25066543, 0.79324937, 0.5549075, -0.8151694, -0.1362296, 0.56297463, 0.52217406, -0.5934619, 0.6124845, 0.06943512, 9.848994, 8.708704)
+shadow_enabled = true
+>>>>>>> cecabda (connected camera to player model)

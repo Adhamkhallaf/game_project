@@ -1,7 +1,11 @@
 extends CharacterBody3D
 
 
+<<<<<<< HEAD
 const SPEED = 5.0
+=======
+const SPEED = 10.0
+>>>>>>> cecabda (connected camera to player model)
 const JUMP_VELOCITY = 4.5
 
 
