@@ -75,20 +75,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0.018097878, -
 shape = SubResource("ConcavePolygonShape3D_ae6sd")
 
 [node name="Knight" parent="." index="2" unique_id=154354347 instance=ExtResource("2_lwesy")]
-transform = Transform3D(-0.025723286, 0, 0.9996691, 0, 1, 0, -0.9996691, 0, -0.025723286, 0.07579076, 1.570941, 0.15285468)
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.07579076, 1.570941, 0.15285468)
+collision_layer = 2
 script = ExtResource("3_7ldk3")
+
+[node name="Skeleton3D" parent="Knight/Rig_Medium" parent_id_path=PackedInt32Array(154354347, 977175277) index="0" unique_id=1595936271]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Knight" index="1" unique_id=268200096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1319083, 0)
 shape = SubResource("CapsuleShape3D_bau1e")
 
 [node name="Node3D" type="Node3D" parent="Knight" index="2" unique_id=56071071]
-transform = Transform3D(1, 0, 0, 0, 0.91241056, 0.24447969, 0, -0.25881907, 0.9659258, -0.07579076, 4.183676, 5.847145)
+transform = Transform3D(1, 0, 0, 0, 0.9484094, 0, 0, 0, 0.9963849, 0, 1.5, 0)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="Knight/Node3D" index="0" unique_id=1957889741]
-transform = Transform3D(0.9927561, 0.036124762, -0.11458856, -0.012013376, 0.9787947, 0.20449135, 0.11954595, -0.20163335, 0.9721382, 0, 0, 0)
-collision_mask = 0
-spring_length = 3.0
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0)
+spring_length = 5.0
 
 [node name="Camera3D" type="Camera3D" parent="Knight/Node3D/SpringArm3D" index="0" unique_id=716183788]
 fov = 46.043213
@@ -114,3 +117,5 @@ transform = Transform3D(0.18119629, 0, 0.92836976, 0, 1, 0, -1.5466431, 0, 0.108
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="8" unique_id=579267995]
 transform = Transform3D(0.258819, 0.9659259, 1.0007824e-08, -0.4829629, 0.12940949, 0.8660254, 0.8365163, -0.22414386, 0.49999997, -2, 7, 6)
 shadow_enabled = true
+
+[editable path="Knight"]
