@@ -7,6 +7,9 @@
 [ext_resource type="AnimationLibrary" uid="uid://cnr0so2dij6kc" path="res://assets/KayKit_Adventurers_2.0_FREE/Animations/gltf/Rig_Medium/Rig_Medium_MovementBasic.glb" id="4_lwesy"]
 [ext_resource type="PackedScene" uid="uid://dtncjiifdrlfx" path="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall.gltf" id="4_rrf1o"]
 [ext_resource type="PackedScene" uid="uid://dw1w62malx27t" path="res://assets/KayKit_Adventurers_2.0_FREE/Characters/gltf/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_doorway.gltf" id="5_224pi"]
+[ext_resource type="AnimationLibrary" uid="uid://bcdl7yhkcniqe" path="res://assets/KayKit_Adventurers_2.0_FREE/Animations/gltf/Rig_Medium/Rig_Medium_General.glb" id="5_bau1e"]
+[ext_resource type="Script" uid="uid://tivf2u11qiac" path="res://game_manager.gd" id="8_rrf1o"]
+[ext_resource type="PackedScene" uid="uid://c1pbtm1oeuqdp" path="res://collectible.tscn" id="9_224pi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r513f"]
 resource_name = "texture"
@@ -81,6 +84,35 @@ script = ExtResource("3_7ldk3")
 
 [node name="Skeleton3D" parent="Knight/Rig_Medium" parent_id_path=PackedInt32Array(154354347, 977175277) index="0" unique_id=1595936271]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+bones/1/position = Vector3(0, 0.4171587, 0)
+bones/1/rotation = Quaternion(0.095845774, -1.1866046e-07, 1.1425705e-08, 0.9953962)
+bones/2/rotation = Quaternion(0, 0.1281281, -0.024905568, 0.9914449)
+bones/3/rotation = Quaternion(-3.7252903e-09, 7.4505793e-09, -9.3132224e-10, 1)
+bones/4/position = Vector3(0.21200737, 0.124591716, -0.049081296)
+bones/4/rotation = Quaternion(-0.6724167, 0.10603064, -0.4246795, 0.59687585)
+bones/5/rotation = Quaternion(-1.6093017e-08, -1.802597e-08, -0.5154912, 0.8568949)
+bones/6/rotation = Quaternion(2.6357031e-11, 6.232488e-10, 0.026658094, 0.99964464)
+bones/6/scale = Vector3(1.0000001, 1, 1)
+bones/7/rotation = Quaternion(-0.36341816, 0.06376812, -0.18752447, 0.9103271)
+bones/8/rotation = Quaternion(-0.029139014, -0.079847366, -0.8339414, 0.54526794)
+bones/9/position = Vector3(-0.21200739, 0.1436727, 0.049081426)
+bones/9/rotation = Quaternion(-0.73190755, 0.34116226, 0.5319017, 0.25495163)
+bones/10/rotation = Quaternion(6.307295e-08, 7.370152e-08, 0.56658787, 0.82400143)
+bones/11/rotation = Quaternion(-3.002606e-08, -9.604189e-09, -0.026658088, 0.99964464)
+bones/11/scale = Vector3(1.0000001, 1.0000001, 1)
+bones/12/rotation = Quaternion(-0.07309579, 0.4268189, 0.15644099, 0.88769865)
+bones/13/rotation = Quaternion(-0.061732214, -0.04616079, 0.41383556, 0.90708244)
+bones/14/rotation = Quaternion(-0.06915971, -0.12955327, 0.015907133, 0.98902977)
+bones/15/position = Vector3(-0.17094506, 0.11358735, -0.10000001)
+bones/15/rotation = Quaternion(0.98625875, 2.700978e-07, -2.1307404e-08, -0.16520801)
+bones/16/rotation = Quaternion(0.49409893, -6.002629e-08, 3.431345e-07, 0.86940575)
+bones/17/rotation = Quaternion(-0.25984055, 2.8457643e-07, -2.012656e-07, 0.9656516)
+bones/18/rotation = Quaternion(2.1433177e-08, 0.9205717, -0.3905736, 6.4466455e-08)
+bones/19/position = Vector3(0.17094506, 0.11358723, 0.10000004)
+bones/19/rotation = Quaternion(0.87406147, -8.3038195e-08, 2.4776313e-08, 0.4858154)
+bones/20/rotation = Quaternion(0.21908584, 6.73655e-08, -1.5214744e-07, 0.97570556)
+bones/21/rotation = Quaternion(-0.60178953, -3.642158e-08, -4.1305782e-08, 0.79865474)
+bones/22/rotation = Quaternion(-4.421328e-08, 0.9201735, -0.39151067, 5.406565e-08)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Knight" index="1" unique_id=268200096]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1319083, 0)
@@ -97,6 +129,7 @@ spring_length = 5.0
 fov = 46.043213
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Knight" index="3" unique_id=773512861]
+libraries/Rig_Medium_General = ExtResource("5_bau1e")
 libraries/Rig_Medium_MovementBasic = ExtResource("4_lwesy")
 
 [node name="wall2" parent="." index="3" unique_id=600927658 instance=ExtResource("4_rrf1o")]
@@ -117,5 +150,9 @@ transform = Transform3D(0.18119629, 0, 0.92836976, 0, 1, 0, -1.5466431, 0, 0.108
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." index="8" unique_id=579267995]
 transform = Transform3D(0.258819, 0.9659259, 1.0007824e-08, -0.4829629, 0.12940949, 0.8660254, 0.8365163, -0.22414386, 0.49999997, -2, 7, 6)
 shadow_enabled = true
+
+[node name="GameManager" type="Node3D" parent="." index="9" unique_id=1249942911]
+script = ExtResource("8_rrf1o")
+bubble_scene = ExtResource("9_224pi")
 
 [editable path="Knight"]
