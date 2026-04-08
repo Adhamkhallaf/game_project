@@ -77,7 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.021717548, 0.016324759)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0.018097878, -0.0003671646)
 shape = SubResource("ConcavePolygonShape3D_ae6sd")
 
-[node name="Knight" parent="." index="2" unique_id=154354347 instance=ExtResource("2_lwesy")]
+[node name="Knight" parent="." index="2" unique_id=154354347 groups=["Player"] instance=ExtResource("2_lwesy")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.07579076, 1.570941, 0.15285468)
 collision_layer = 2
 script = ExtResource("3_7ldk3")
@@ -154,5 +154,6 @@ shadow_enabled = true
 [node name="GameManager" type="Node3D" parent="." index="9" unique_id=1249942911]
 script = ExtResource("8_rrf1o")
 bubble_scene = ExtResource("9_224pi")
+current_target_system = "DEC"
 
 [editable path="Knight"]

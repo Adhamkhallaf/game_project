@@ -5,11 +5,14 @@ extends Area3D
 @onready var text_mesh = $Number
 
 func _ready():
-	text_mesh.mesh.text = value
-	
+	_update_text()
 	$AnimationPlayer.play("idle")
-	
+
+func _update_text():
+	if text_mesh and text_mesh.mesh:
+		text_mesh.mesh.text = value
+
 func _on_body_entered(body):
-	if body.name == "Knight":
-		print("Collected: ", value)
+	if body.is_in_group("Player"):
+		print("Character collected: ", value)
 		queue_free()

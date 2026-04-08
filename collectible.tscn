@@ -5,7 +5,9 @@
 [sub_resource type="SphereMesh" id="SphereMesh_d4byk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rd2yi"]
-transparency = 1
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
 albedo_color = Color(0.6, 0.73333335, 1, 0.19607843)
 metallic_specular = 1.0
 roughness = 0.0
@@ -182,6 +184,7 @@ _data = {
 }
 
 [node name="Collectible" type="Area3D" unique_id=978198772]
+collision_mask = 3
 script = ExtResource("1_rd2yi")
 
 [node name="Bubble" type="MeshInstance3D" parent="." unique_id=1576812117]
