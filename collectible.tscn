@@ -21,8 +21,7 @@ text = "1"
 font_size = 80
 depth = 0.1
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_h1l3x"]
-size = Vector3(0.26220703, 0.58706665, 0.1104126)
+[sub_resource type="SphereShape3D" id="SphereShape3D_rd2yi"]
 
 [sub_resource type="Animation" id="Animation_8orai"]
 length = 2.0
@@ -197,8 +196,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("TextMesh_yciwo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1070799742]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-shape = SubResource("BoxShape3D_h1l3x")
+transform = Transform3D(0.5, 0, 0, 0, 0.7, 0, 0, 0, 0.5, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_rd2yi")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=763584571]
 libraries/ = SubResource("AnimationLibrary_h1l3x")
