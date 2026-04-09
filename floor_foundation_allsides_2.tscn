@@ -64,15 +64,23 @@ sky_material = SubResource("ProceduralSkyMaterial_bau1e")
 background_mode = 2
 sky = SubResource("Sky_drc8x")
 
+[sub_resource type="LabelSettings" id="LabelSettings_bau1e"]
+font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bau1e"]
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(1.353256, 1.353256, 1.353256, 0)
+
 [node name="floor_foundation_allsides2" unique_id=454228219 instance=ExtResource("1_uans4")]
 
-[node name="floor_foundation_allsides" parent="." index="0" unique_id=1345932638]
+[node name="floor_foundation_allsides" parent="." index="0" unique_id=1369322621]
 transform = Transform3D(8.143888, 0, 0, 0, 1, 0, 0, 0, 7.1011915, 0.033918142, -1.5559015, 0.2176652)
 
-[node name="StaticBody3D" parent="floor_foundation_allsides" index="0" unique_id=414371519]
+[node name="StaticBody3D" parent="floor_foundation_allsides" index="0" unique_id=1240003586]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.021717548, 0.016324759)
 
-[node name="CollisionShape3D" parent="floor_foundation_allsides/StaticBody3D" index="0" unique_id=1715132495]
+[node name="CollisionShape3D" parent="floor_foundation_allsides/StaticBody3D" index="0" unique_id=611528870]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0.018097878, -0.0003671646)
 
 [node name="floor_foundation_allsides2" type="MeshInstance3D" parent="." index="1" unique_id=1066714353]
@@ -91,7 +99,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.07579076,
 collision_layer = 2
 script = ExtResource("3_7ldk3")
 
-[node name="Skeleton3D" parent="Knight/Rig_Medium" parent_id_path=PackedInt32Array(154354347, 2047443155) index="0" unique_id=1991240307]
+[node name="Skeleton3D" parent="Knight/Rig_Medium" parent_id_path=PackedInt32Array(154354347, 977175277) index="0" unique_id=1595936271]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/1/position = Vector3(0, 0.4171587, 0)
 bones/1/rotation = Quaternion(0.095845774, -1.1866046e-07, 1.1425705e-08, 0.9953962)
@@ -163,9 +171,39 @@ transform = Transform3D(0.18119629, 0, 0.92836976, 0, 1, 0, -1.5466431, 0, 0.108
 transform = Transform3D(0.258819, 0.9659259, 1.0007824e-08, -0.4829629, 0.12940949, 0.8660254, 0.8365163, -0.22414386, 0.49999997, -2, 7, 6)
 shadow_enabled = true
 
-[node name="GameManager" type="Node3D" parent="." index="9" unique_id=1249942911]
+[node name="GameManager" type="Node3D" parent="." index="9" unique_id=1249942911 groups=["GameManager"]]
 script = ExtResource("8_rrf1o")
 bubble_scene = ExtResource("9_224pi")
-current_target_system = "DEC"
+
+[node name="HUD" type="CanvasLayer" parent="." index="10" unique_id=564989182]
+
+[node name="UI_Root" type="Control" parent="HUD" index="0" unique_id=1414121445]
+layout_mode = 3
+anchor_left = 0.1
+anchor_right = 0.2
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/UI_Root" index="0" unique_id=1913410860]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PromptLabel" type="Label" parent="HUD/UI_Root/HBoxContainer" index="0" unique_id=1438187507]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_bau1e")
+
+[node name="SystemLabel" type="Label" parent="HUD/UI_Root/HBoxContainer" index="1" unique_id=530775743]
+layout_mode = 2
+text = "BIN |"
+label_settings = SubResource("LabelSettings_bau1e")
+
+[node name="NumberBox" type="PanelContainer" parent="HUD/UI_Root/HBoxContainer" index="2" unique_id=2107341615]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bau1e")
+
+[node name="CollectionLabel" type="Label" parent="HUD/UI_Root/HBoxContainer/NumberBox" index="0" unique_id=1519909784]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_bau1e")
 
 [editable path="Knight"]
