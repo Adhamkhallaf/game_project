@@ -8,20 +8,15 @@ extends Node3D
 
 var systems = {
 	"BIN": 2,
-	"OCT": 8,
-	"DEC": 10,
 	"HEX": 16
 }
 
 var system_chars = {
-	"BIN": ["0", "1"],
-	"OCT": ["0", "1", "2", "3", "4", "5", "6", "7"],
-	"DEC": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-	"HEX": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
+	"BIN": ["0", "1"]
 }
 
-var source_system: String = ""
-var target_system: String = ""
+var source_system: String = "HEX"
+var target_system: String = "BIN"
 var goal_value_decimal: int = 0
 var goal_string_target: String = ""
 var current_collected_string: String = ""
@@ -34,14 +29,7 @@ func start_new_round():
 	current_collected_string = ""
 	collection_label.text = ""
 	
-	var system_names = systems.keys()
-	source_system = system_names.pick_random()
-	
-	target_system = source_system
-	while target_system == source_system:
-		target_system = system_names.pick_random()
-	
-	goal_value_decimal = randi_range(1, 31)
+	goal_value_decimal = randi_range(1, 63)
 	
 	var prompt_val = _convert_to_base(goal_value_decimal, systems[source_system])
 	goal_string_target = _convert_to_base(goal_value_decimal, systems[target_system])
@@ -61,20 +49,28 @@ func _clear_old_bubbles():
 			child.queue_free()
 
 func spawn_bubbles(count: int):
-	var pool = system_chars[target_system]
 	for i in range(count):
-		var new_bubble = bubble_scene.instantiate()
-		new_bubble.value = pool.pick_random()
-		var rx = randf_range(-12.0, 12.0)
-		var rz = randf_range(-12.0, 12.0)
-		new_bubble.position = Vector3(rx, 1.5, rz)
-		add_child(new_bubble)
+		spawn_single_bubble()
+
+func spawn_single_bubble():
+	var pool = system_chars[target_system]
+	var new_bubble = bubble_scene.instantiate()
+	new_bubble.value = pool.pick_random()
+	
+	var rx = randf_range(-12.0, 12.0)
+	var rz = randf_range(-12.0, 12.0)
+	new_bubble.position = Vector3(rx, 1.5, rz)
+	
+	add_child(new_bubble)
 
 func add_to_collection(val: String):
 	current_collected_string += val
 	collection_label.text = ""
 	for char in current_collected_string:
 		collection_label.text += char + " "
+	
+	# Spawn a replacement bubble immediately
+	spawn_single_bubble()
 	
 	_check_win_condition()
 
