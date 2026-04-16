@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="uni_project"
-run/main_scene="uid://b54apd8aoh8m"
+run/main_scene="uid://c7cpsc15bs4y1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

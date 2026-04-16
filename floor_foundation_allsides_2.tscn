@@ -74,13 +74,13 @@ bg_color = Color(1.353256, 1.353256, 1.353256, 0)
 
 [node name="floor_foundation_allsides2" unique_id=454228219 instance=ExtResource("1_uans4")]
 
-[node name="floor_foundation_allsides" parent="." index="0" unique_id=1369322621]
+[node name="floor_foundation_allsides" parent="." index="0" unique_id=146001258]
 transform = Transform3D(8.143888, 0, 0, 0, 1, 0, 0, 0, 7.1011915, 0.033918142, -1.5559015, 0.2176652)
 
-[node name="StaticBody3D" parent="floor_foundation_allsides" index="0" unique_id=1240003586]
+[node name="StaticBody3D" parent="floor_foundation_allsides" index="0" unique_id=1322514934]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.021717548, 0.016324759)
 
-[node name="CollisionShape3D" parent="floor_foundation_allsides/StaticBody3D" index="0" unique_id=611528870]
+[node name="CollisionShape3D" parent="floor_foundation_allsides/StaticBody3D" index="0" unique_id=1781971251]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.536743e-07, 0.018097878, -0.0003671646)
 
 [node name="floor_foundation_allsides2" type="MeshInstance3D" parent="." index="1" unique_id=1066714353]
@@ -99,7 +99,7 @@ transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0.07579076,
 collision_layer = 2
 script = ExtResource("3_7ldk3")
 
-[node name="Skeleton3D" parent="Knight/Rig_Medium" parent_id_path=PackedInt32Array(154354347, 977175277) index="0" unique_id=1595936271]
+[node name="Skeleton3D" parent="Knight/Rig_Medium" parent_id_path=PackedInt32Array(154354347, 933907900) index="0" unique_id=960821366]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 bones/1/position = Vector3(0, 0.4171587, 0)
 bones/1/rotation = Quaternion(0.095845774, -1.1866046e-07, 1.1425705e-08, 0.9953962)
