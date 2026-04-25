@@ -3,7 +3,7 @@ extends CharacterBody3D
 @export var speed = 5.0
 @export var sprint_speed = 10.0
 @export var acceleration = 15.0
-@export var jump_velocity = 4.5
+@export var jump_velocity = 8.0
 @export var mouse_sensitivity = 0.002
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -23,6 +23,15 @@ func _unhandled_input(event):
 		cam_pivot.rotation.x = clamp(cam_pivot.rotation.x, deg_to_rad(-70), deg_to_rad(70))
 
 func _physics_process(delta):
+	if is_on_floor():
+		if not has_meta("last_safe_pos"):
+			set_meta("last_safe_pos", global_position)
+		set_meta("last_safe_pos", global_position)
+
+	if global_position.y < -10.0 and has_meta("last_safe_pos"):
+		global_position = get_meta("last_safe_pos")
+		velocity = Vector3.ZERO
+
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -47,6 +56,15 @@ func _physics_process(delta):
 
 	if is_on_floor():
 		if input_dir.length() > 0:
+			if not has_meta("footstep_timer"):
+				set_meta("footstep_timer", 0.0)
+			var timer = get_meta("footstep_timer") - delta
+			if timer <= 0.0:
+				if AudioManager:
+					AudioManager.play("walk")
+				timer = 0.35 if Input.is_action_pressed("sprint") else 0.5
+			set_meta("footstep_timer", timer)
+			
 			if Input.is_action_pressed("sprint"):
 				_play_animation("Rig_Medium_MovementBasic/Running_A")
 			else:

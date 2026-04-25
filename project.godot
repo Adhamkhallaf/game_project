@@ -15,6 +15,15 @@ run/main_scene="uid://c7cpsc15bs4y1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+AudioManager="*res://audio_manager.gd"
+PauseManager="*res://pause_manager.gd"
+
+[dotnet]
+
+project/assembly_name="uni_project"
+
 [input]
 
 move_forward={
